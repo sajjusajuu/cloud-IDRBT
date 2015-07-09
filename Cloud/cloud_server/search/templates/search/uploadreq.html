@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    {% load staticfiles %}
+    <meta charset="UTF-8">
+    <title>Bank upload Form</title>
+    <link rel="stylesheet" href="{% static 'search/css/reset.css' %}">
+    <link rel="stylesheet" href="{% static 'search/css/style.css' %}">
+  </head>
+  
+  <body>
+    <div class="info">
+
+      <h2>Upload the files to the cloud</h2>
+      <br> 
+    </div>
+    <div class='form animated bounceIn'>
+      <div class="login">
+        <h2>Upload your crypted Index files and Documents </h2>
+        <form action="/upload" method="post"  enctype="multipart/form-data">
+    		{% csrf_token %}
+    		{{ form }}
+    		<input style="background-color:black" type="submit" value="Submit" />
+		    </form>
+      </div>
+    </div>
+  </body>
+</html>

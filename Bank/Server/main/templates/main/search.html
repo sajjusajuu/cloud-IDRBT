@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    {% load staticfiles %}
+    <meta charset="UTF-8">
+    <title>Bank Search Form</title>
+    <link rel="stylesheet" href="{% static 'main/css/reset.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+  </head>
+  
+  <body>
+    <div class='info'>
+      <h1>welcome {{ us }}</h1>
+      <br>
+      <h2>Keyword Search Form</h2>  
+    </div>
+    <div class='form aniamted bounceIn'>
+      <div class='login'>
+        <h2>Enter keywords with spaces to generate trapdoor</h2>
+        <form action="/main/search/" method="post">
+          {% csrf_token %}
+          <input placeholder='Keywords' name='keywords' type='text'>
+          <button>Search</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    {% load staticfiles %}
+    <meta charset="UTF-8">
+    <title>Bank Login Form</title>
+    <link rel="stylesheet" href="{% static 'main/css/reset.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+  </head>
+  
+  <body>
+    <div class='info'>
+      <h1>Login Form</h1>  
+    </div>
+    <div class='form aniamted bounceIn'>
+      <div class='login'>
+        <h2>Login To Your Account</h2>
+        <form action="/main/login/" method="post">
+          {% csrf_token %}
+          <input placeholder='Username' name='username' type='text'>
+          <input placeholder='Password' name='password' type='password'>
+          <button>Login</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

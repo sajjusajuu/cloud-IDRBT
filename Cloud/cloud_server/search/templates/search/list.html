@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    {% load staticfiles %}
+    <meta charset="UTF-8">
+    <title>Bank Search Form</title>
+    <link rel="stylesheet" href="{% static 'search/css/reset.css' %}">
+    <link rel="stylesheet" href="{% static 'search/css/style.css' %}">
+  </head>
+  
+  <body>
+    <div class="info">
+      <h1>Files</h1>
+      <br>
+    </div>
+    
+    {% for i in f_list %}
+      <li><a href="/down/{{ i }}">{{ i }}</a></li>
+    {% endfor %}
+  </body>
+</html>
